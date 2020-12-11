@@ -1,16 +1,20 @@
 import React from 'react'
 
-const Product = ({image,title,price,description}) => {
+const Product = ({product,handleAddToCart}) => {
+  const {image,title,price,description} = product
+
   return (
     <div className="Products-item">
-      <img src={image} alt={title}/>
+      <img src={image} alt={title} />
       <div className="Products-item-info">
         <h2>
-          {title} <span>{price}</span>
+          {title} 
+          {' '}
+          <span>{price}</span>
         </h2>
         <p>{description}</p>
       </div>
-      <button type="button">Comprar</button>
+      <button type="button" onClick={() => handleAddToCart(product)}>Comprar</button>
     </div>
   );
 }

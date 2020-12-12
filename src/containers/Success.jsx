@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Map from '../components/Map';
 import AppContext from '../context/AppContext';
 import '../styles/components/Success.css'
 
@@ -19,7 +20,9 @@ const Success = () => {
           {' '}
           {buyer.address}
         </span>
-        <div className="Success-map">Google Maps</div>
+        <div className="Success-map">
+          <Map />
+        </div>
       </div>
     </div>
   );
